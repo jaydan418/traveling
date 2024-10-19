@@ -6,6 +6,7 @@
     <title>jaydans | Traveling page</title>
 </head>
 <body>
+    <button onclick="goback()">Go Back to the Mainpage</button>
     <u><h1>Welcome to the traveling page</h1></u>
     <h2>traveling plans for your country may not be available it may take time to get your country available</h2>
     <button onclick="view()">available countrys</button>
@@ -39,6 +40,10 @@
           } else {
             alert("Your country is not yet available");
           }  
+        }
+
+        function goback() {
+            windoww.location.href = "/jaydanspage/home.html"
         }
     </script>
     <style>
