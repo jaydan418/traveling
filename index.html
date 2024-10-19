@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaydans | Traveling page</title>
+</head>
+<body>
+    <u><h1>Welcome to the traveling page</h1></u>
+    <h2>traveling plans for your country may not be available it may take time to get your country available</h2>
+    <button onclick="view()">available countrys</button>
+    <button onclick="started()">Get started</button>
+    <script>
+        alert("Country to country coming soon...")
+        function view(){
+            alert("These countrys are available: Germany")
+        }
+        function started(){
+          const userInput = prompt("Enter what country you would like to travel inside like city to city: ");
+          
+          if (userInput.toLowerCase() === "germany") {
+            var germanychoice= prompt("With what do you want to travel with these are the options : Train | Tour | bus | car")
+            if (germanychoice.toLowerCase() === "train") {
+              alert("Here is the most relaiable train  service in whole germany and the only one DB here is the link (https://www.bahn.de/) if you press ok another will pop up but ignore it")
+            }
+            if (germanychoice.toLowerCase() === "tour") {
+              alert("Here are the 5 best tour service company in germany: 1.Eurolatino Tour Operators | 2.Trafalgar | 3.Costsaver | 4.TravelPerk | 5.BoldData | ")   
+             }
+             if (germanychoice.toLowerCase() === "bus") {
+                alert("Here is are the top 5 bus service company in Germany: 1. FlixBus | 2. Eurolines | 3. RegioJet | 4. BlaBlaBus | 5. ALSA")
+             }
+             if (germanychoice.toLowerCase() === "car") {
+                alert("Here is the option for car services 1 BlaBlaCar webseite (https://www.blablacar.de/)")
+             }
+             else {
+                alert("you have entered a wrong option")
+             }
+
+          } else {
+            alert("Your country is not yet available");
+          }  
+        }
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        button{
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</body>
+</html>
