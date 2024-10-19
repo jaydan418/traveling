@@ -6,12 +6,15 @@
     <title>jaydans | Traveling page</title>
 </head>
 <body>
-     <button>Go back</button>
+     <butto onclick="goback()">Go back</button>
     <u><h1>Welcome to the traveling page</h1></u>
     <h2>traveling plans for your country may not be available it may take time to get your country available</h2>
     <button onclick="view()">available countries</button>
     <button onclick="started()">Get started</button>
     <script>
+        function goback() {
+            window.location.href = "https://jaydan418.github.io/jaydanspage/home.html"
+        }
        const COUNTRIES = {
          usa: {
            train: "https://rail.ninja/united-states-trains",
