@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaydans | Traveling page | flying</title>
+</head>
+<body>
+    <button onclick="goback()">Go back</button>
+    <section>
+    <u><h1>Welcome to the flying page</h1></u>
+    <h2>All countries are available</h2>
+<h2>here is it how it works you write your country name you want fly from and the country you want to fly to | so 1.from 2.to</h2>
+<form id="search-form">
+    <input type="text" id="query1" placeholder="from">
+    <input type="text" id="query2" placeholder="to">
+    <button type="submit">Search</button>
+  </form>
+  <div id="search-results"></div>
+    
+</section>
+   <script>
+     function goback() {
+        window.location.href = "https://jaydan418.github.io/traveling/";
+     } 
+
+     document.getElementById('search-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const query1 = document.getElementById('query1').value;
+  const query2 = document.getElementById('query2').value;
+  const url = `https://www.rome2rio.com/s/${encodeURIComponent(query1)}/${encodeURIComponent(query2)}`;
+  const resultsContainer = document.getElementById('search-results');
+  resultsContainer.innerHTML = `<a href="${url}" target="_blank">Search from ${query1} to ${query2}</a>`;
+});
+
+   </script>
+   <style>
+   section{
+            text-align: center;
+            font-size: 30px;
+        }
+
+        button{
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+
+        }
+
+        input {
+            padding: 12px 20px;
+            font: 400px;
+        }
+
+   </style>
+</body>
+</html>
