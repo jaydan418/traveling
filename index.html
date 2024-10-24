@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaydans | Traveling page</title>
+</head>
+<body>
+  <button onclick="goback()">Go back</button>
+    <u><h1>Welcome to the traveling page</h1></u>
+    <h2>traveling plans for your country may not be available it may take time to get your country available</h2>
+    <button onclick="view()">available countries</button>
+    <button onclick="started()">Get started</button>
+    <script>
+      
+       const COUNTRIES = {
+
+        china: {
+          train: "https://rail.ninja/train/fuxinghao-train?",
+          tour: "https://www.chinadiscovery.com/china-tours.html",
+          bus: "https://www.etripchina.com/bus/",
+          car: "https://www.didiglobal.com/"
+        },
+
+        india: {
+          train: "https://www.indianrailways.com/",
+          tour: "https://www.viator.com/India-tours/Private-and-Custom-Tours",
+          bus: "https://www.flixbus.in/",
+          car: "https://www.blablacar.in/"
+        },
+
+        france: {
+          train: "https://www.sncf-connect.com/",
+          tour: "https://www.getyourguide.com/poland-l169018/day-trips-tc172/",
+          bus: "https://www.flixbus.fr/",
+          car: "https://www.blablacar.fr/"
+        },
+
+        poland: {
+          train:"https://www.intercity.pl/en/",
+          tour:"https://www.onthegotours.com/Poland?",
+          bus:"https://www.superpks.pl/",
+          car:"https://www.rome2rio.com/s/Warsaw/Kraków"
+        },
+        
+        america: {
+           train: "https://rail.ninja/united-states-trains",
+           tour: "https://www.viator.com/USA-tours/Private-and-Custom-Tours",
+           bus: "https://www.omio.com",
+           car: "https://www.blacklane.com/en/countries/us/"
+         },
+
+        usa: {
+           train: "https://rail.ninja/united-states-trains",
+           tour: "https://www.viator.com/USA-tours/Private-and-Custom-Tours",
+           bus: "https://www.omio.com",
+           car: "https://www.blacklane.com/en/countries/us/"
+         },
+         germany: {
+           train: "https://www.bahn.de/",
+           tour: "https://travel.trafalgar.com/",
+           bus: "https://www.flixbus.de/",
+           car: "https://www.blablacar.de/"
+         },
+        nigeria: {
+         train:"https://nrc.gsds.ng/login", 
+         tour:"https://www.viator.com/Nigeria/d22316-ttd?sortType=external",
+         bus: "https://www.busbud.com/en/country/ng",
+         car: "https://www.rome2rio.com/s/Abuja/Ibadan"
+        },
+       };
+       
+       function started() {
+         const userInput = prompt("Enter what country you would like to travel inside like city to city (by train, bus, car, or fly): ").toLowerCase();
+         const country = COUNTRIES[userInput];
+         if (userInput === "fly") {
+          window.location.href = "https://jaydan418.github.io/traveling/fly.html";
+         }
+        
+         if (country) {
+           const travelMethod = prompt("With what do you want to travel with these are the options : Train | Tour | bus | car").toLowerCase();
+           const url = country[travelMethod];
+       
+           if (url) {
+             window.location.href = url;
+           } else {
+             alert("Invalid travel method");
+           }
+         } else {
+           alert("Your country is not yet available");
+         }
+       }
+
+       function view() {
+        alert("The countries available are: 1. USA(america) | 2. Germany | 3. Nigeria | 4. Poland | 5.France | 6. India | 7. China");
+       }
+
+       function goback() {
+         window.location.href = "https://jaydan418.github.io/jaydanspage/home.html";
+       }
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        button{
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</body>
+</html>
